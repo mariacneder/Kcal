@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meu Corpo</title>
+<meta name="theme-color" content="#2f63e0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#3158e6" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Meu Corpo">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="top1">
+    <h1 id="titulo">Início</h1>
+    <button id="btn-config" class="icon-btn" aria-label="Configurações">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+    </button>
+  </div>
+  <div class="top2">
+    <div class="datenav" id="datenav">
+      <button id="dia-ant" aria-label="Dia anterior">‹</button>
+      <span class="dlab"><span id="dia-label"></span><input type="date" id="dia-input" aria-label="Escolher data"></span>
+      <button id="dia-prox" aria-label="Próximo dia">›</button>
+    </div>
+    <span id="monthinfo" class="monthinfo"></span>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+<nav class="tabbar" id="tabbar" aria-label="Navegação principal"></nav>
+
+<div id="sheet-backdrop" hidden></div>
+<section id="sheet" class="sheet" role="dialog" aria-modal="true" hidden></section>
+<div id="dlg-back" hidden></div>
+<section id="dlg" class="dlg" role="alertdialog" aria-modal="true" hidden></section>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="db.js"></script>
+<script src="foods-base.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
